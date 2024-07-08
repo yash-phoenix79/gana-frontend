@@ -86,18 +86,81 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  font-family: Arial, sans-serif;
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  color: rgb(var(--foreground-rgb));
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+/* Container styles */
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .container {
+    background: rgb(var(--callout-rgb));
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Button styles */
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button.increment {
+  background-color: #4caf50;
+  color: white;
+}
+
+button.decrement {
+  background-color: #f44336;
+  color: white;
+}
+
+button.incrementByAmount {
+  background-color: #2196f3;
+  color: white;
+}
+
+/* Heading styles */
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Centering content */
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 @media (prefers-color-scheme: dark) {
